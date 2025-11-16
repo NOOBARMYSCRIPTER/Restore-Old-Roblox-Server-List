@@ -445,7 +445,10 @@
 
         for (let j = 0; j < thumbnails.length; j++)
           if (thumbnails[j].includes(playerImageUrl))
-            item.style.borderColor = 'rgb(0, 176, 111)';
+                const leftDiv = item.querySelector('.section-left');
+                const rightDiv = item.querySelector('.section-right');
+                if(leftDiv) leftDiv.style.border = '2px solid rgb(0, 176, 111)';
+                if(rightDiv) rightDiv.style.border = '2px solid rgb(0, 176, 111)';
 
         first.parentNode.insertBefore(item, first);
 
